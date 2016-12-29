@@ -3,6 +3,7 @@
 .idea/
 
 # sbt specific
+project/project
 .cache/
 .history/
 .lib/
@@ -18,3 +19,5 @@ project/plugins/project/
 .worksheet
 
 .DS_Store
+project/project/
+src/main/java/
