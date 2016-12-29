@@ -52,5 +52,9 @@ Restarting cluster: CLUSTER_NAME
 
 ```
 
+* Publishing Library Release
+
+```sbt release```
+
 
 

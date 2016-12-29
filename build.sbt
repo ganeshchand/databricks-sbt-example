@@ -1,7 +1,5 @@
 name := "Databricks SBT Example"
 
-version := "0.1-SNAPSHOT"
-
 organization := "com.databricks.example"
 
 scalaVersion := "2.11.8"
@@ -28,4 +26,6 @@ dbcClusters += "MY_CLUSTER_NAME" // use "ALL_CLUSTERS" to attach to all clusters
 dbcLibraryPath := "/Users/"+System.getenv("DBCLOUD_USER")+"/lib"
 
 dbcRestartOnAttach := true // Default true
+
+publishTo := Some(Resolver.file("file",  new File(Path.userHome.absolutePath+"/.m2/repository")))
 
