@@ -4,7 +4,7 @@
 
 Steps:
 
-*. Clone this repo
+* Clone this repo
 
 ```
 git clone https://github.com/ganeshchand/databricks-sbt-example.git
