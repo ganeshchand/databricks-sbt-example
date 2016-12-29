@@ -4,11 +4,13 @@
 
 Steps:
 
-1. Clone this repo
+*. Clone this repo
 
-```git clone https://github.com/ganeshchand/databricks-sbt-example.git```
+```
+git clone https://github.com/ganeshchand/databricks-sbt-example.git
+```
 
-2. You could hardcode values for the following properties directly in build.sbt. However, the recommended approach is to set your environment variables so that build.sbt doesn't become user specific.
+* You could hardcode values for the following properties directly in build.sbt. However, the recommended approach is to set your environment variables so that build.sbt doesn't become user specific.
 
  * dbcUsername
  * dbcPassword
@@ -26,11 +28,11 @@ Steps:
  export DBCLOUD_USER
  export DBCLOUD_PASSWORD
  export DBCLOUD_SHARD
- 
+ ```
 
-#### To upload a jar and attach it to a cluster in Databricks
+* To upload a jar and attach it to a cluster in Databricks
 
-Note: If you haven't updated `dbcLibraryPath` in build.sbt, by default, I have set it to be /Users/username@databricks.com/lib. You have to make sure the 'lib' folder exists in your home directory. You can also comment `dbcLibraryPath` altogether in which case, the jar file will be uploaded under root directory.
+**Note**: If you haven't updated `dbcLibraryPath` in build.sbt, by default, I have set it to be /Users/username@databricks.com/lib. You have to make sure the 'lib' folder exists in your home directory. You can also comment `dbcLibraryPath` altogether in which case, the jar file will be uploaded under root directory.
 
 ```
 $ sbt
