@@ -1,16 +1,17 @@
 package com.databricks.example
 
-import org.apache.spark._
-import org.apache.spark.sql.SQLContext
+import org.apache.spark.sql.SparkSession
 
 object SparkApp {
   def main(args: Array[String]) {
-    // Cluster configurations should be added at cluster creation time in the job scheduler
-    val sc = SparkContext.getOrCreate()
-    val sqlCtx = SQLContext.getOrCreate(sc)
 
-    val df = sqlCtx.table("companies")
-    println("MIKLOS WAS HERE!")
+    val spark = SparkSession.builder()
+        .appName("Sample app")
+      .getOrCreate()
+    import spark.implicits._
+
+    val df = spark.range(1, 10).toDF("id")
+    println("Test")
     println(df.count())
   }
 }
