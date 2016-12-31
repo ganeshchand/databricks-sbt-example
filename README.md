@@ -36,11 +36,10 @@ git clone https://github.com/ganeshchand/databricks-sbt-example.git
 
 ```
 $ sbt
-> set dbcClusters := Seq("CLUSTER_NAME")
 
 > dbcListClusters // run this command to make sure the setup works
 
-> set dbcClusters := Seq("my_cluster_name") // you can override the cluster name specified in build.sbt
+> set dbcClusters := Seq("CLUSTER_NAME") // you can override the cluster name specified in build.sbt
 
 > dbcDeploy
  
